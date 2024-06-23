@@ -1,0 +1,22 @@
+name: Linux Build
+on: push
+jobs:
+  build:
+    name: Build on Ubuntu
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+      with:
+        ref: f7bb59d9f51cc10b25ff86d34a3eff744e60c46e
+    - name: Install dependencies
+      run: | 
+        sudo apt-get install git g++ make libtool automake autopoint pkg-config flex bison lua5.2
+        apt-get install subversion yasm cvs cmake ragel
+    - name: Run build
+      run: |
+        cd contrib
+        mkdir native
+        cd native
+        ../bootstrap
+        make
