@@ -12,7 +12,7 @@ jobs:
     - name: Install dependencies
       run: | 
         sudo apt-get install git g++ make libtool automake autopoint pkg-config flex bison lua5.2
-        sudo apt-get install subversion yasm cvs cmake ragel
+        sudo apt-get install subversion yasm cvs cmake ragel ninja-build
     - name: Run build
       run: |
         cd contrib
