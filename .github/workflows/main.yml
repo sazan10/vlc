@@ -12,7 +12,9 @@ jobs:
     - name: Install dependencies
       run: | 
         sudo apt-get install git g++ make libtool automake autopoint pkg-config flex bison lua5.2
-        sudo apt-get install subversion yasm cvs cmake ragel ninja-build meson liblua5.2-dev     
+        sudo apt-get install subversion yasm cvs cmake ragel ninja-build meson liblua5.2-dev  
+        sudo apt-get -y install libvorbis-dev libogg-dev libtheora-dev speex libspeex-dev flac libflac-dev x264 libx264-dev a52-0.7.4 liba52-0.7.4-dev mpeg2dec libmpeg2-4-dev faad libfaad-dev faac libfaac-dev lame libmp3lame-dev ffmpeg libavdevice-dev libmad0 libmad0-dev dirac libdirac-dev liboil-dev libschroedinger-dev libebml-dev libdca-dev twolame libtwolame-dev libmpcdec-dev libvorbisidec1 libvorbisidec-dev libass-dev libass4 libmatroska-dev  libdvbpsi-dlibmodplulibmodplug-dev libshout3 libshout3-dev  libdvdread4 libdvdnav4 libdvdnav-dev livemedia-utils liblivemedia-dev libcddb2 libcddb2-dev libcdio13 libcdio-dev libxcb-composite0-dev libcdio-utils vcdimager libvcdinfo0 libvcdinfo-dev libgpg-error0 libgpg-error-dev libgcrypt11 libgcrypt11-dev gnutls-bin libgnutls26 libgnutls-dev libdap11 libdap-bin libdap-dev libxml2 libxml2-dev libpng12-0 libpng12-dev libjpeg8 libtiff5 libsdl1.2-dev libsdl-image1.2 libsdl-image1.2-dev libc-bin gettext libfreetype6 libfreetype6-dev libfribidi-dev libfribidi0 zlib1g zlib1g-dev libtag1-dev libcaca0 libcaca-dev caca-utils libqt4-core libqt4-dev libportaudio2 libportaudio-dev libupnp-dev libupnp4 libupnp6 libexpat1 libexpat1-dev yasm libxcb-xv0 libxcb-xv0-dev libx11-xcb1 libx11-xcb-dev liblua5.2-dev libswscale-dev
+
     - name: Run build
       run: |
         ./bootstrap
