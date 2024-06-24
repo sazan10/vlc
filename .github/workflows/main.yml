@@ -15,8 +15,6 @@ jobs:
         sudo apt-get install subversion yasm cvs cmake ragel ninja-build meson    
     - name: Run build
       run: |
-        cd contrib
-        mkdir native
-        cd native
-        ../bootstrap
+        ./bootstrap
+        ./configure
         make
